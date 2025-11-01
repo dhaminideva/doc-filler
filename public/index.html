@@ -325,7 +325,7 @@
       if(!labels.length) return alert('Upload a template first.');
       document.getElementById('aiStatus').textContent='Thinking…';
       const answers = Object.fromEntries(labels.map(l=>{ const id='f_'+l.replace(/[^a-zA-Z0-9_-]/g,'_'); return [l, document.getElementById(id)?.value]; }).filter(([,v])=>v));
-      const r = await fetch('/api/suggest', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ placeholders:labels, answers, context:'Y Combinator Post-Money SAFE template' }) });
+      const r = await fetch('/api/ai/suggest', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ placeholders:labels, answers, context:'Y Combinator Post-Money SAFE template' }) });
       const j = await r.json(); const s = j.suggestions||[];
       document.getElementById('aiStatus').textContent = s.length? 'Ready' : 'Idle';
       document.getElementById('suggestBox').innerHTML = s.length ? s.map(x=>{
