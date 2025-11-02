@@ -3,7 +3,8 @@
 Upload a SAFE (`.docx`), detect placeholders, optionally get AI suggestions/autofill, and export a completed document.
 https://doc-filler.onrender.com/
 
----
+---<img width="1919" height="1075" alt="Screenshot 2025-10-31 225924" src="https://github.com/user-attachments/assets/2deb4a5e-d658-4816-9002-ce2de1b58568" />
+
 
 ##  Features
 
